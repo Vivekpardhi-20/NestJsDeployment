@@ -41,7 +41,7 @@ describe('AppController (e2e)', () => {
       .send({ email, password: 'asdf' })
       .expect(201);
  
-    const cookie = res.get('Set-Cookie');
+    const cookie = res.get('Set-Cookie') as string[];
  
     const { body } = await request(app.getHttpServer())
       .get('/auth/whoami')
