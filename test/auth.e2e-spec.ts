@@ -19,7 +19,7 @@ describe('AppController (e2e)', () => {
   });
 
   it('handle a signup request', () => {
-    const email = 'rooooot1@gmail.com'
+    const email = 'roooooot112@gmail.com'
 
     return request(app.getHttpServer())
       .post('/auth/signup')
@@ -34,11 +34,11 @@ describe('AppController (e2e)', () => {
   });
 
     it('signup as a new user then get the currently logged in user', async () => {
-    const email = 'asdf@asdf.com';
+    const email = 'asdf112@asdf.com';
  
     const res = await request(app.getHttpServer())
       .post('/auth/signup')
-      .send({ email, password: 'asdf' })
+      .send({ email, password: 'asdf'})
       .expect(201);
  
     const cookie = res.get('Set-Cookie') as string[];
